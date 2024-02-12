@@ -6,13 +6,14 @@ set(OJ_LIBS_NET)
 set(OJ_LIBS_HOST)
 set(OJ_DEFAULT_PORTABLE ON)
 
-option(PANDORA "Build for Pandora" OFF)     # arm-none-linux-gnueabi
-option(CAANOO "Build for GP2X Canoo" OFF)   # arm-gph-linux-gnueabi
-option(WIZ "Build for GP2X Wiz" OFF)        # arm-openwiz-linux-gnu
-option(GP2X "Build for GP2X" OFF)           # arm-open2x-linux
-option(DINGOO "Build for Dingoo" OFF)       # mipsel-linux*
-option(GAMESHELL "Build for GameShell" OFF) # armv7l-unknown-linux-gnueabihf
-option(RISCOS "Build for RISC OS" OFF)      # arm-unknown-riscos
+option(PANDORA "Build for Pandora" OFF)             # arm-none-linux-gnueabi
+option(CAANOO "Build for GP2X Canoo" OFF)           # arm-gph-linux-gnueabi
+option(WIZ "Build for GP2X Wiz" OFF)                # arm-openwiz-linux-gnu
+option(GP2X "Build for GP2X" OFF)                   # arm-open2x-linux
+option(DINGOO "Build for Dingoo" OFF)               # mipsel-linux*
+option(GAMESHELL "Build for GameShell" OFF)         # armv7l-unknown-linux-gnueabihf
+option(RISCOS "Build for RISC OS" OFF)              # arm-unknown-riscos
+option(RG35XXPLUS "Build for RG35XX Plus / H" OFF)  # arm-buildroot-linux-gnueabihf (botecera toolchain)
 
 # Official/Homebrew Toolchain files define these
 if(NINTENDO_3DS)
@@ -71,6 +72,10 @@ elseif(GP2X)
 elseif(DINGOO)
 	add_compile_definitions(DINGOO)
 	set(OJ_HOST "Dingoo")
+	list(APPEND PLATFORM_LIST ${OJ_HOST})
+elseif(RG35XXPLUS)
+	add_compile_definitions(RG35XXPLUS)
+	set(OJ_HOST "RG35XXPLUS")
 	list(APPEND PLATFORM_LIST ${OJ_HOST})
 elseif(GAMESHELL)
 	add_compile_definitions(GAMESHELL)

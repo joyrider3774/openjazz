@@ -333,7 +333,7 @@ elseif(RISCOS)
 	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/OpenJazz,ff8
 		res/riscos/!Run,feb res/riscos/!Boot,feb res/riscos/!Sprites,ff9
 		DESTINATION !OpenJazz COMPONENT riscos)
-elseif(PANDORA OR CANOO OR WIZ OR GP2X OR DINGOO OR GAMESHELL)
+elseif(PANDORA OR CANOO OR WIZ OR GP2X OR DINGOO OR GAMESHELL OR RG35XXPLUS)
 	# left blank for the moment (TODO: opk?)
 elseif(UNIX)
 	include(GNUInstallDirs)

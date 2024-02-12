@@ -42,7 +42,7 @@
 	#define SOUND_FREQ 44100
 #endif
 
-#if defined(GP2X) || defined(PSP) || defined(_3DS) || defined(__vita__)
+#if defined(GP2X) || defined(PSP) || defined(_3DS) || defined(__vita__) || defined(RG35XXPLUS) 
 	#define SOUND_SAMPLES 512
 #else
 	#define SOUND_SAMPLES 2048
@@ -51,7 +51,7 @@
 #ifdef __SYMBIAN32__
 	#define MUSIC_RESAMPLEMODE MODPLUG_RESAMPLE_LINEAR
 	#define MUSIC_FLAGS MODPLUG_ENABLE_MEGABASS
-#elif defined(CAANOO) || defined(WIZ) || defined(GP2X) || defined(DINGOO) || defined(PSP)
+#elif defined(CAANOO) || defined(WIZ) || defined(GP2X) || defined(DINGOO) || defined(PSP) || defined(RG35XXPLUS)
 	#define MUSIC_RESAMPLEMODE MODPLUG_RESAMPLE_LINEAR
 	#define MUSIC_FLAGS 0
 #else

@@ -13,6 +13,7 @@ Use a cross-compiler, enable specific platform code with option:
   * GP2X: `-DGP2X=ON`
   * Dingoo: `-DDINGOO=ON`
   * GameShell: `-DGAMESHELL=ON`
+  * RG35XXPLUS: `-DRG35XXPLUS=ON`
 
 ## RISC OS
 

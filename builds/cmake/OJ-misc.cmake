@@ -98,6 +98,7 @@ if(CPPCHECK_EXECUTABLE)
 		-I${CMAKE_CURRENT_SOURCE_DIR}/src
 		-U__SYMBIAN32__ -UUIQ3 -UENABLE_JJ2        # unmaintained
 		-UGP2X -UWIZ -UDINGOO -UCAANOO -UGAMESHELL # contributed
+		-URG35XXPLUS
 		-UPSP -U__vita__ -U_3DS -U__wii__          # homebrew
 		-U__riscos__
 		#--enable=information

@@ -695,7 +695,7 @@ int SetupMenu::setupMain () {
 
 			case 1:
 
-#if !(defined(CAANOO) || defined(WIZ) || defined(GP2X) || defined(PSP) || defined(_3DS) || defined(__vita__))
+#if !(defined(CAANOO) || defined(WIZ) || defined(GP2X) || defined(PSP) || defined(_3DS) || defined(__vita__) || defined(RG35XXPLUS)) 
 				if (setupKeyboard() == E_QUIT) return E_QUIT;
 #else
 				if (message("FEATURE NOT AVAILABLE") == E_QUIT) return E_QUIT;
@@ -705,7 +705,7 @@ int SetupMenu::setupMain () {
 
 			case 2:
 
-#if !defined(DINGOO) && !defined(PSP)  && !defined(__vita__) // FIXME: psp, psvita
+#if !defined(DINGOO) && !defined(PSP) && !defined(__vita__) // FIXME: psp, psvita
 				if (setupJoystick() == E_QUIT) return E_QUIT;
 #else
 				if (message("FEATURE NOT AVAILABLE") == E_QUIT) return E_QUIT;
